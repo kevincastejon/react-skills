@@ -1,4 +1,4 @@
-# react-skill-bars
+# @kevincastejon/react-skill-bars
 
 A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.
 
@@ -7,12 +7,12 @@ A dependency-free, pure-css animated, resizable, customizable, skill bars panel 
 
 ## Install
 ```
-npm i react-skill-bars
+npm i @kevincastejon/react-skill-bars
 ```
 
 ## Usage
 ```
-import SkillBars from 'react-skill-bars';
+import SkillBars from '@kevincastejon/react-skill-bars';
 
 const skillsData= [
   {
@@ -34,7 +34,7 @@ const skillsData= [
 
 or you can use the SkillBar (singular) component this way:
 ```
-import SkillBar from 'react-skill-bars';
+import SkillBar from '@kevincastejon/react-skill-bars';
 
 ...
 
