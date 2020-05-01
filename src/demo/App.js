@@ -8,7 +8,7 @@ const App = () => {
   <div style={styles.root}>
   <h1>@kevincastejon/react-skill-bars live demo</h1>
     <SkillBars skills={skills} />
-    <a style={{color: 'white'}} href="https://github.com/kevincastejon/@kevincastejon/react-skill-bars">GITHUB sources</a>
+    <a style={{color: 'white'}} href="https://github.com/kevincastejon/react-skill-bars">GITHUB sources</a>
   </div>
 )};
 
