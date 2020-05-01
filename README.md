@@ -12,7 +12,7 @@ npm i react-skills
 
 ## Usage
 ```
-import SkillBars from 'react-skills';
+import { SkillBars } from 'react-skills';
 
 const skillsData= [
   {
@@ -34,7 +34,7 @@ const skillsData= [
 
 or you can use the SkillBar (singular) component this way:
 ```
-import SkillBar from 'react-skills';
+import { SkillBar } from 'react-skills';
 
 ...
 
