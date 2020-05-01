@@ -12,6 +12,8 @@ npm i react-skill-bars
 
 ## Usage
 ```
+import SkillBars from 'react-skill-bars';
+
 const skillsData= [
   {
     name: 'ReactJS',
@@ -32,6 +34,10 @@ const skillsData= [
 
 or you can use the SkillBar (singular) component this way:
 ```
+import SkillBar from 'react-skill-bars';
+
+...
+
 <SkillBar name="ReactJS" level={100} color="blue" />
 <SkillBar name="SomeOtherTech" level={80} color="red" />
 ```
