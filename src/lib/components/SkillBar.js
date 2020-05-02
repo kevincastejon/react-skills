@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function SkillBar(props) {
   const {
-    name, level, color, height, labelWidth, customLabel, duration, levelProgress
+    name, level, color, height, labelWidth, customLabel, duration, levelProgress, flat
   } = props;
   const [ready, setReady] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -13,7 +13,7 @@ export default function SkillBar(props) {
       display: 'flex',
       borderRadius: 3,
       backgroundColor: 'rgba(0,0,0,0)',
-      boxShadow: '3px 3px 5px 0px #252525',
+      boxShadow: flat?'none':'3px 3px 5px 0px #252525',
     },
     labelContainer: {
       whiteSpace: 'nowrap',
@@ -63,8 +63,6 @@ export default function SkillBar(props) {
       timer = setInterval(() => {
         const innerWidth = getComputedStyle(progressBarRef.current).width;
         const outerWidth = getComputedStyle(barContainerRef.current).width;
-        console.log(innerWidth, outerWidth);
-        console.log(progress , level);
         let lvl = (Math.ceil(parseInt(innerWidth.substr(0, innerWidth.length-1), 10)/parseInt(outerWidth.substr(0, outerWidth.length-1), 10)*100));
         lvl = lvl>level?level:lvl;
         setProgress(lvl)
@@ -102,6 +100,7 @@ SkillBar.propTypes = {
   height: PropTypes.number,
   duration: PropTypes.number,
   levelProgress: PropTypes.bool,
+  flat: PropTypes.bool,
   labelWidth: PropTypes.number,
   customLabel: PropTypes.node,
 };
@@ -109,6 +108,7 @@ SkillBar.defaultProps = {
   height: 30,
   duration: 2,
   levelProgress: false,
+  flat: false,
   labelWidth: 100,
   customLabel: null,
 };

@@ -26,10 +26,11 @@ const App = () => {
       <SkillBars skills={skills} />
       <h3>Custom settings example</h3>
       <SkillBars
-        height={40}
+        barsHeight={60}
         labelsWidth={120}
         duration={5}
         levelProgress
+        flat
         customLabels={(skill) => (
           <h5 style={{margin: 0, marginLeft:10, textAlign:'left', fontSize:18, color:'#252525'}}>
             <img alt="icon" style={{height:25, marginRight:10, marginBottom:4, verticalAlign:'middle'}} src={skill.icon} />
@@ -37,7 +38,9 @@ const App = () => {
           </h5>
         )}
         skills={iconSkills} />
-      <a style={{ color: 'white' }} href="https://github.com/kevincastejon/react-skills">Documentation and sources</a>
+        <h3>
+          <a href="https://github.com/kevincastejon/react-skills">Documentation and sources</a>
+        </h3>
     </div>
   );
 };

@@ -4,6 +4,10 @@ A dependency-free, pure-css animated, resizable, customizable, skill bars panel 
 
 ***This project was bootstrapped with [Create React Library](https://github.com/dimimikadze/create-react-library).***
 
+## Live Demo
+You can see a live demo here
+
+[https://kevincastejon.github.io/react-skills/](https://kevincastejon.github.io/react-skills/)
 
 ## Install
 ```
@@ -49,6 +53,7 @@ import { SkillBar } from 'react-skills';
 - skills [array of object] *required* - An array of SkillBar props data (see below).
 - duration [number] *optional* default 2 - The animation duration in seconds.
 - levelProgress [bool] *optional* default false - Whether or not the level text should increment as the bar grow up or directly display the level value.
+- flat [bool] *optional* default false - Whether the skillbars own a box shadow or not.
 - barsHeight [number] *optional* default 30 - The SkillBar component height.
 - labelsWidth [number] *optional* default 100 - The SkillBar component label width.
 - spacing [number] *optional* default 15 - The spacing between each SkillBar row.
@@ -61,6 +66,7 @@ import { SkillBar } from 'react-skills';
 - color [string] *required* - The SkillBar component color.
 - duration [number] *optional* default 2 - The animation duration in seconds.
 - levelProgress [bool] *optional* default false - Whether or not the level texts should increment as the bars grow up or directly display the level value.
+- flat [bool] *optional* default false - Whether the skillbar owns a box shadow or not.
 - height [number] *optional* default 30 - The SkillBar component height.
 - labelWidth [number] *optional* default 100 - The SkillBar component label width.
 - customLabel [function] *optional* default null - User defined function that takes a skill parameter and returns a React component to display instead of the default label.
@@ -78,6 +84,7 @@ Runs the test watcher in an interactive mode.
 Builds the library for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `npm publish`
+### `npm run demo` or `yarn demo`
 
-Publishes the library to NPM.
+Builds the demo app for production to the `demo` folder.
+It correctly bundles React demo app in production mode and optimizes the build for the best performance.
