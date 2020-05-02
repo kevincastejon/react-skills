@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 // nodejs library to set properties for components
 import PropTypes from 'prop-types';
 
 export default function SkillBar(props) {
   const {
-    name, level, color, height, labelWidth, customLabel,
+    name, level, color, height, labelWidth, customLabel, duration, levelProgress
   } = props;
   const [ready, setReady] = useState(false);
+  const [progress, setProgress] = useState(0);
   const styles = {
     root: {
       display: 'flex',
@@ -40,7 +41,7 @@ export default function SkillBar(props) {
     progressBar: {
       borderRadius: 3,
       height,
-      transition: 'width 2s',
+      transition: 'width '+duration+'s',
       width: `${ready ? level : 0}%`,
       backgroundColor: color,
     },
@@ -53,9 +54,26 @@ export default function SkillBar(props) {
       fontWeight: 'bold',
     },
   };
+  const progressBarRef = useRef(null);
+  const barContainerRef = useRef(null);
   useEffect(() => {
     setReady(true);
-  }, []);
+    let timer;
+    if (progress < level) {
+      timer = setInterval(() => {
+        const innerWidth = getComputedStyle(progressBarRef.current).width;
+        const outerWidth = getComputedStyle(barContainerRef.current).width;
+        console.log(innerWidth, outerWidth);
+        console.log(progress , level);
+        let lvl = (Math.ceil(parseInt(innerWidth.substr(0, innerWidth.length-1), 10)/parseInt(outerWidth.substr(0, outerWidth.length-1), 10)*100));
+        lvl = lvl>level?level:lvl;
+        setProgress(lvl)
+      }, 20);
+    }
+    return(() => {
+      clearInterval(timer);
+    })
+  }, [progress, duration, level], );
   return (
     <div style={styles.root}>
 
@@ -66,12 +84,12 @@ export default function SkillBar(props) {
         </h5>
         )}
       </div>
-      <div style={styles.barContainer}>
+      <div ref={barContainerRef} style={styles.barContainer}>
         <span style={styles.level}>
-          {level}
+          {levelProgress?progress:level}
           %
         </span>
-        <div style={styles.progressBar} />
+        <div ref={progressBarRef} style={styles.progressBar} />
       </div>
     </div>
   );
@@ -82,11 +100,15 @@ SkillBar.propTypes = {
   level: PropTypes.number.isRequired,
   color: PropTypes.string.isRequired,
   height: PropTypes.number,
+  duration: PropTypes.number,
+  levelProgress: PropTypes.bool,
   labelWidth: PropTypes.number,
   customLabel: PropTypes.node,
 };
 SkillBar.defaultProps = {
   height: 30,
+  duration: 2,
+  levelProgress: false,
   labelWidth: 100,
   customLabel: null,
 };

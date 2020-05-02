@@ -47,6 +47,8 @@ import { SkillBar } from 'react-skills';
 ### SkillBars
 
 - skills [array of object] *required* - An array of SkillBar props data (see below).
+- duration [number] *optional* default 2 - The animation duration in seconds.
+- levelProgress [bool] *optional* default false - Whether or not the level text should increment as the bar grow up or directly display the level value.
 - barsHeight [number] *optional* default 30 - The SkillBar component height.
 - labelsWidth [number] *optional* default 100 - The SkillBar component label width.
 - spacing [number] *optional* default 15 - The spacing between each SkillBar row.
@@ -57,6 +59,8 @@ import { SkillBar } from 'react-skills';
 - name [string] *required* - The name of the skill.
 - level [number] *required* - The skill level.
 - color [string] *required* - The SkillBar component color.
+- duration [number] *optional* default 2 - The animation duration in seconds.
+- levelProgress [bool] *optional* default false - Whether or not the level texts should increment as the bars grow up or directly display the level value.
 - height [number] *optional* default 30 - The SkillBar component height.
 - labelWidth [number] *optional* default 100 - The SkillBar component label width.
 - customLabel [function] *optional* default null - User defined function that takes a skill parameter and returns a React component to display instead of the default label.
