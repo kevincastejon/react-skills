@@ -2,6 +2,8 @@
 
 A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.
 
+![react-skills preview](https://repository-images.githubusercontent.com/260488185/fa955200-8c9f-11ea-91d8-d8307c6c288c)
+
 ***This project was bootstrapped with [Create React Library](https://github.com/dimimikadze/create-react-library).***
 
 ## Live Demo
