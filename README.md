@@ -50,6 +50,7 @@ import { SkillBar } from 'react-skills';
 - barsHeight [number] *optional* default 30 - The SkillBar component height.
 - labelsWidth [number] *optional* default 100 - The SkillBar component label width.
 - spacing [number] *optional* default 15 - The spacing between each SkillBar row.
+- customLabels [function] *optional* default null - User defined function that takes a skill parameter and returns a React component to display instead of the default labels.
 
 ### SkillBar
 
@@ -58,6 +59,7 @@ import { SkillBar } from 'react-skills';
 - color [string] *required* - The SkillBar component color.
 - height [number] *optional* default 30 - The SkillBar component height.
 - labelWidth [number] *optional* default 100 - The SkillBar component label width.
+- customLabel [function] *optional* default null - User defined function that takes a skill parameter and returns a React component to display instead of the default label.
 
 ## Developers
 

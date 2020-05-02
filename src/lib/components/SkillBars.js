@@ -5,7 +5,7 @@ import SkillBar from './SkillBar';
 
 export default function SkillBars(props) {
   const {
-    skills, barsHeight, spacing, labelsWidth,
+    skills, barsHeight, spacing, labelsWidth, customLabels
   } = props;
   const styles = {
     root: {
@@ -17,9 +17,9 @@ export default function SkillBars(props) {
   };
   return (
     <div style={styles.root}>
-      {skills.map((skill) => (
+      {skills.map((skill, i) => (
         <div style={styles.skill} key={skill.name}>
-          <SkillBar labelWidth={labelsWidth} height={barsHeight} name={skill.name} level={skill.level} color={skill.color} labelColor={skill.labelColor} />
+          <SkillBar customLabel={customLabels(skill)} labelWidth={labelsWidth} height={barsHeight} name={skill.name} level={skill.level} color={skill.color} labelColor={skill.labelColor} />
         </div>
       ))}
     </div>
@@ -35,9 +35,11 @@ SkillBars.propTypes = {
   barsHeight: PropTypes.number,
   labelsWidth: PropTypes.number,
   spacing: PropTypes.number,
+  customLabels: PropTypes.arrayOf(PropTypes.node)
 };
 SkillBars.defaultProps = {
   barsHeight: 30,
   labelsWidth: 100,
   spacing: 15,
+  customLabels: null
 };
