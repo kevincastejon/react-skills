@@ -16,6 +16,7 @@
     "npm-publish": "npm version minor && npm publish",
     "deploy": "npm run build && npm run build-dev-pages && npm run demo && gh-pages -d demo",
     "storybook": "start-storybook -p 6006",
+    "git-commit": "git add . && git commit -m ",
     "build-storybook": "build-storybook -o ./public/storybook"
   },
   "license": "MIT",

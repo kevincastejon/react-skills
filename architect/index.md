@@ -24,6 +24,8 @@ layout: default
 - #### [Documentation](https://kevincastejon.github.io/react-skills/documentation)
 - #### [Quick demo](https://kevincastejon.github.io/react-skills/)
 - #### [Storybook playground](https://kevincastejon.github.io/react-skills/storybook)
+- #### [NPM](https://www.npmjs.com/package/react-skills)
+- #### [Github](https://github.com/kevincastejon/react-skills)
 
 <a name="install"></a>
 ## Installation
@@ -31,7 +33,7 @@ layout: default
 npm i react-skills
 ```
 <a name="usage"></a>
-## Usage
+## Basic usage
 ```js
 import { SkillBars } from 'react-skills';
 
@@ -57,7 +59,7 @@ or you can use the SkillBar (singular) component this way:
 ```js
 import { SkillBar } from 'react-skills';
 
-...
+// ...
 
 <SkillBar name="ReactJS" level={100} color="blue" />
 <SkillBar name="SomeOtherTech" level={80} color="red" />
