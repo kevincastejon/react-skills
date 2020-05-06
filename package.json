@@ -2,7 +2,7 @@
   "name": "react-skills",
   "version": "1.12.0",
   "main": "build/index.js",
-  "homepage": "http://kevincastejon.github.io/react-skills/",
+  "homepage": "https://kevincastejon.github.io/react-skills/",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",

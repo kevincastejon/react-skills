@@ -7,7 +7,7 @@ layout: default
 
 ![react-skills preview](https://repository-images.githubusercontent.com/260488185/fa955200-8c9f-11ea-91d8-d8307c6c288c)
 
-- [Live Demo](#livedemo)
+- [Links](#links)
 - [Installation](#install)
 - [Usage](#usage)
 - [Developers](#dev)
@@ -15,9 +15,10 @@ layout: default
 
 ***This project was bootstrapped with [Create React Library](https://github.com/dimimikadze/create-react-library).***
 
-<a name="livedemo"></a>
-## Live Demo
+<a name="links"></a>
+## Links
 
+- #### [Documentation](https://kevincastejon.github.io/react-skills/documentation)
 - #### [Quick demo](https://kevincastejon.github.io/react-skills/)
 - #### [Storybook playground](https://kevincastejon.github.io/react-skills/storybook)
 

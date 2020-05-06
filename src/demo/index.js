@@ -7,14 +7,14 @@ import * as serviceWorker from './serviceWorker';
 
 const DocuRedirect = () => {
   useEffect(() => {
-    window.location.href = "/documentation"
+    window.location.href = "/react-skills/documentation"
   })
   return(<>redirecting...</>)
 }
 
 const StoryBookRedirect = () => {
   useEffect(() => {
-    window.location.href = "/storybook"
+    window.location.href = "/react-skills/storybook"
   })
   return(<>redirecting...</>)
 }
@@ -22,14 +22,14 @@ const StoryBookRedirect = () => {
 ReactDOM.render(
   <Router basename="/react-skills">
     <Switch>
-      <Route path="/demo">
-        <App />
+      <Route exact path="/documentation">
+        <DocuRedirect />
       </Route>
-      <Route path="/storybook">
+      <Route exact path="/storybook">
         <StoryBookRedirect />
       </Route>
-      <Route path="/">
-        <DocuRedirect />
+      <Route exact path="/">
+        <App />
       </Route>
     </Switch>
   </Router>
