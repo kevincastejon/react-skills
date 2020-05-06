@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-skills/static/css/main.3cee8a0e.chunk.css",
-    "main.js": "/react-skills/static/js/main.5957ed90.chunk.js",
-    "main.js.map": "/react-skills/static/js/main.5957ed90.chunk.js.map",
+    "main.js": "/react-skills/static/js/main.dc2d77fd.chunk.js",
+    "main.js.map": "/react-skills/static/js/main.dc2d77fd.chunk.js.map",
     "runtime-main.js": "/react-skills/static/js/runtime-main.44480c21.js",
     "runtime-main.js.map": "/react-skills/static/js/runtime-main.44480c21.js.map",
     "static/js/2.b197bd58.chunk.js": "/react-skills/static/js/2.b197bd58.chunk.js",
     "static/js/2.b197bd58.chunk.js.map": "/react-skills/static/js/2.b197bd58.chunk.js.map",
     "index.html": "/react-skills/index.html",
-    "precache-manifest.f75a1e00167cf9826c5745b40039e910.js": "/react-skills/precache-manifest.f75a1e00167cf9826c5745b40039e910.js",
+    "precache-manifest.8e0c88a24e9229eb619876ce7871caf4.js": "/react-skills/precache-manifest.8e0c88a24e9229eb619876ce7871caf4.js",
     "service-worker.js": "/react-skills/service-worker.js",
     "static/css/main.3cee8a0e.chunk.css.map": "/react-skills/static/css/main.3cee8a0e.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.44480c21.js",
     "static/js/2.b197bd58.chunk.js",
     "static/css/main.3cee8a0e.chunk.css",
-    "static/js/main.5957ed90.chunk.js"
+    "static/js/main.dc2d77fd.chunk.js"
   ]
 }
