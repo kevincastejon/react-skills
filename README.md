@@ -1,5 +1,8 @@
 # react-skills
 
+![npm_version][https://img.shields.io/npm/v/react-skills]
+![license][https://img.shields.io/npm/l/react-skills]
+
 A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.
 
 ![react-skills preview](https://repository-images.githubusercontent.com/260488185/fa955200-8c9f-11ea-91d8-d8307c6c288c)
