@@ -15,6 +15,7 @@
     "build-dev-pages": "npm run gen-doc && npm run combine-docs && npm run gen-docs-page && npm run build-storybook",
     "npm-publish": "npm version minor && npm publish",
     "deploy": "npm run build && npm run build-dev-pages && npm run demo && gh-pages -d demo",
+    "full-deploy": "npm run deploy && npm run git-commit",
     "storybook": "start-storybook -p 6006",
     "git-commit": "git add . && git commit -m ",
     "build-storybook": "build-storybook -o ./public/storybook"
