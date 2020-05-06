@@ -1,6 +1,6 @@
 {
   "name": "react-skills",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "main": "build/index.js",
   "homepage": "https://kevincastejon.github.io/react-skills/",
   "scripts": {
@@ -19,8 +19,7 @@
     "build-storybook": "build-storybook -o ./public/storybook"
   },
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.6.0",
     "@kevincastejon/react-doc-generator": "^1.2.5",
