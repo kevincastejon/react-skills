@@ -14,7 +14,7 @@
     "gen-docs-page": "cd ./architect && bundle exec jekyll build -d ../public/documentation && replace-in-file //assets/g ./assets ../public/documentation/index.html --isRegex",
     "build-dev-pages": "npm run gen-doc && npm run combine-docs && npm run gen-docs-page && npm run build-storybook",
     "npm-publish": "npm version minor && npm publish",
-    "deploy": "npm run build && npm run npm-publish && npm run build-dev-pages && npm run demo && gh-pages -d demo",
+    "deploy": "npm run build && npm run build-dev-pages && npm run demo && gh-pages -d demo",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o ./public/storybook"
   },
