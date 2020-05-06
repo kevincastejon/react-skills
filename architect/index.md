@@ -3,8 +3,8 @@ layout: default
 ---
 
 
-![npm_version][https://img.shields.io/npm/v/react-skills]
-![license][https://img.shields.io/npm/l/react-skills]
+![npm_version](https://img.shields.io/npm/v/react-skills)
+![license](https://img.shields.io/npm/l/react-skills)
 
 
 
