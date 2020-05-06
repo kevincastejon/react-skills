@@ -20,7 +20,7 @@
 <meta property="og:description" content="A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component." />
 <meta property="og:site_name" content="react-skills" />
 <script type="application/ld+json">
-{"@type":"WebSite","headline":"react-skills","url":"/","name":"react-skills","description":"A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.","@context":"https://schema.org"}</script>
+{"@type":"WebSite","url":"/","name":"react-skills","description":"A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.","headline":"react-skills","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -68,6 +68,12 @@
   <li>
     <h4 id="storybook-playground"><a href="https://kevincastejon.github.io/react-skills/storybook">Storybook playground</a></h4>
   </li>
+  <li>
+    <h4 id="npm"><a href="https://www.npmjs.com/package/react-skills">NPM</a></h4>
+  </li>
+  <li>
+    <h4 id="github"><a href="https://github.com/kevincastejon/react-skills">Github</a></h4>
+  </li>
 </ul>
 
 <p><a name="install"></a></p>
@@ -75,7 +81,7 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i react-skills
 </code></pre></div></div>
 <p><a name="usage"></a></p>
-<h2 id="usage">Usage</h2>
+<h2 id="basic-usage">Basic usage</h2>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">SkillBars</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-skills</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">skillsData</span><span class="o">=</span> <span class="p">[</span>
@@ -99,7 +105,7 @@
 <p>or you can use the SkillBar (singular) component this way:</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">SkillBar</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-skills</span><span class="dl">'</span><span class="p">;</span>
 
-<span class="p">...</span>
+<span class="c1">// ...</span>
 
 <span class="o">&lt;</span><span class="nx">SkillBar</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">ReactJS</span><span class="dl">"</span> <span class="nx">level</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">}</span> <span class="nx">color</span><span class="o">=</span><span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="nx">SkillBar</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">SomeOtherTech</span><span class="dl">"</span> <span class="nx">level</span><span class="o">=</span><span class="p">{</span><span class="mi">80</span><span class="p">}</span> <span class="nx">color</span><span class="o">=</span><span class="dl">"</span><span class="s2">red</span><span class="dl">"</span> <span class="o">/&gt;</span>
