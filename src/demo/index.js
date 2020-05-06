@@ -7,14 +7,14 @@ import * as serviceWorker from './serviceWorker';
 
 const DocuRedirect = () => {
   useEffect(() => {
-    window.location.href = "react-skills/documentation"
+    window.location.href = "/documentation"
   })
   return(<>redirecting...</>)
 }
 
 const StoryBookRedirect = () => {
   useEffect(() => {
-    window.location.href = "react-skills/storybook"
+    window.location.href = "/storybook"
   })
   return(<>redirecting...</>)
 }
