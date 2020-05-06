@@ -35,6 +35,7 @@ export default function SkillBar(props) {
     label: {
       margin: 0,
       color: 'white',
+      backgroundColor: 'rgb(0, 0, 0, 0.2)'
     },
     barContainer: {
       flexGrow: 1,

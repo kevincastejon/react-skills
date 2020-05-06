@@ -30,7 +30,7 @@ const App = () => {
       <SkillBar name="labelWidth=200" level="100" color="#d542bd" labelWidth={200} />
       <br/>
       <SkillBar name="customLabel" level="100" color="#36cae4" labelWidth={160} customLabel={
-        <h5 style={{margin: 0, marginLeft:10, textAlign:'left', fontSize:18, color:'#e74023'}}>
+        <h5 style={{margin: 0, backgroundColor: 'rgb(0, 0, 0, 0.2)', paddingLeft:10, textAlign:'left', fontSize:18, color:'#e74023'}}>
             <img alt="icon" style={{height:25, marginRight:10, marginBottom:4, verticalAlign:'middle'}} src={smiley} />
             customLabel
           </h5>
