@@ -2,6 +2,10 @@ import React, { useRef, useState, useEffect } from 'react';
 // nodejs library to set properties for components
 import PropTypes from 'prop-types';
 
+
+/**
+ * Displays a animated skill bar
+ */
 export default function SkillBar(props) {
   const {
     name, level, color, height, labelWidth, customLabel, duration, levelProgress, flat
@@ -94,15 +98,24 @@ export default function SkillBar(props) {
 }
 
 SkillBar.propTypes = {
+  /** The name of the skill. */
   name: PropTypes.string.isRequired,
+  /** The skill level. */
   level: PropTypes.number.isRequired,
+  /** The background color. */
   color: PropTypes.string.isRequired,
-  height: PropTypes.number,
+  /** The animation duration in seconds. */
   duration: PropTypes.number,
+  /** The component height. */
+  height: PropTypes.number,
+  /** Whether or not the level text should increment as the bar grows up or directly display the level value. */
   levelProgress: PropTypes.bool,
+  /** Whether the component owns a box shadow or not. */
   flat: PropTypes.bool,
+  /** The label width. */
   labelWidth: PropTypes.number,
-  customLabel: PropTypes.node,
+  /** User defined function that takes a skill parameter and returns a React component to display instead of the default label. */
+  customLabel: PropTypes.func,
 };
 SkillBar.defaultProps = {
   height: 30,

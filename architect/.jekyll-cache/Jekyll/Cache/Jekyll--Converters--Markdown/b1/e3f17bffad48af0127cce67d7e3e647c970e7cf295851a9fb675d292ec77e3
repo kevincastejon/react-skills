@@ -1,0 +1,261 @@
+I"�-<h1 id="react-skills">react-skills</h1>
+
+<p>A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.</p>
+
+<p><img src="https://repository-images.githubusercontent.com/260488185/fa955200-8c9f-11ea-91d8-d8307c6c288c" alt="react-skills preview" /></p>
+
+<p><strong><em>This project was bootstrapped with <a href="https://github.com/dimimikadze/create-react-library">Create React Library</a>.</em></strong></p>
+
+<h2 id="live-demo">Live Demo</h2>
+<p>You can see a live demo here</p>
+
+<p><a href="https://kevincastejon.github.io/react-skills/">https://kevincastejon.github.io/react-skills/</a></p>
+
+<h2 id="install">Install</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i react-skills
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">SkillBars</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-skills</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">skillsData</span><span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">ReactJS</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">level</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">SomeOtherTech</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">level</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">red</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="p">...</span>
+
+<span class="o">&lt;</span><span class="nx">SkillBars</span> <span class="nx">skills</span><span class="o">=</span><span class="p">{</span><span class="nx">skillsData</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>or you can use the SkillBar (singular) component this way:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">SkillBar</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-skills</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="o">&lt;</span><span class="nx">SkillBar</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">ReactJS</span><span class="dl">"</span> <span class="nx">level</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">}</span> <span class="nx">color</span><span class="o">=</span><span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="nx">SkillBar</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">SomeOtherTech</span><span class="dl">"</span> <span class="nx">level</span><span class="o">=</span><span class="p">{</span><span class="mi">80</span><span class="p">}</span> <span class="nx">color</span><span class="o">=</span><span class="dl">"</span><span class="s2">red</span><span class="dl">"</span> <span class="o">/&gt;</span>
+</code></pre></div></div>
+
+<h2 id="props-api">Props API</h2>
+
+<h3 id="skillbars">SkillBars</h3>
+
+<ul>
+  <li>skills [array of object] <em>required</em> - An array of SkillBar props data (see below).</li>
+  <li>duration [number] <em>optional</em> default 2 - The animation duration in seconds.</li>
+  <li>levelProgress [bool] <em>optional</em> default false - Whether or not the level text should increment as the bar grow up or directly display the level value.</li>
+  <li>flat [bool] <em>optional</em> default false - Whether the skillbars own a box shadow or not.</li>
+  <li>barsHeight [number] <em>optional</em> default 30 - The SkillBar component height.</li>
+  <li>labelsWidth [number] <em>optional</em> default 100 - The SkillBar component label width.</li>
+  <li>spacing [number] <em>optional</em> default 15 - The spacing between each SkillBar row.</li>
+  <li>customLabels [function] <em>optional</em> default null - User defined function that takes a skill parameter and returns a React component to display instead of the default labels.</li>
+</ul>
+
+<h3 id="skillbar">SkillBar</h3>
+
+<ul>
+  <li>name [string] <em>required</em> - The name of the skill.</li>
+  <li>level [number] <em>required</em> - The skill level.</li>
+  <li>color [string] <em>required</em> - The background color.</li>
+  <li>duration [number] <em>optional</em> default 2 - The animation duration in seconds.</li>
+  <li>height [number] <em>optional</em> default 30 - The component height.</li>
+  <li>levelProgress [bool] <em>optional</em> default false - Whether or not the level texts should increment as the bars grow up or directly display the level value.</li>
+  <li>flat [bool] <em>optional</em> default false - Whether the component owns a box shadow or not.</li>
+  <li>labelWidth [number] <em>optional</em> default 100 - The label width.</li>
+  <li>customLabel [function] <em>optional</em> default null - User defined function that takes a skill parameter and returns a React component to display instead of the default label.</li>
+</ul>
+
+<h2 id="developers">Developers</h2>
+
+<p>Runs the library in development mode. Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
+
+<h3 id="test">Test</h3>
+<p><code class="highlighter-rouge">npm run test</code> or <code class="highlighter-rouge">yarn run test</code></p>
+
+<p>Runs the test watcher in an interactive mode.</p>
+
+<h3 id="build">Build</h3>
+<p><code class="highlighter-rouge">npm run build</code> or <code class="highlighter-rouge">yarn build</code></p>
+
+<p>Builds the library for production to the <code class="highlighter-rouge">build</code> folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.</p>
+
+<h3 id="demo">Demo</h3>
+<p><code class="highlighter-rouge">npm run demo</code> or <code class="highlighter-rouge">yarn demo</code></p>
+
+<p>Builds the demo app for production to the <code class="highlighter-rouge">demo</code> folder.
+It correctly bundles React demo app in production mode and optimizes the build for the best performance.</p>
+
+<h2 id="props-api-1">Props API</h2>
+<hr />
+
+<h3 id="skillbar-1">SkillBar</h3>
+
+<p>SkillBar - Displays a animated skill bar</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default value</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>name</strong></td>
+      <td><em>string</em></td>
+      <td>yes</td>
+      <td> </td>
+      <td style="text-align: left">The name of the skill.</td>
+    </tr>
+    <tr>
+      <td><strong>level</strong></td>
+      <td><em>number</em></td>
+      <td>yes</td>
+      <td> </td>
+      <td style="text-align: left">The skill level.</td>
+    </tr>
+    <tr>
+      <td><strong>color</strong></td>
+      <td><em>string</em></td>
+      <td>yes</td>
+      <td> </td>
+      <td style="text-align: left">The background color.</td>
+    </tr>
+    <tr>
+      <td><strong>duration</strong></td>
+      <td><em>number</em></td>
+      <td>no</td>
+      <td>2</td>
+      <td style="text-align: left">The animation duration in seconds.</td>
+    </tr>
+    <tr>
+      <td><strong>height</strong></td>
+      <td><em>number</em></td>
+      <td>no</td>
+      <td>30</td>
+      <td style="text-align: left">The component height.</td>
+    </tr>
+    <tr>
+      <td><strong>levelProgress</strong></td>
+      <td><em>bool</em></td>
+      <td>no</td>
+      <td>false</td>
+      <td style="text-align: left">Whether or not the level text should increment as the bar grows up or directly display the level value.</td>
+    </tr>
+    <tr>
+      <td><strong>flat</strong></td>
+      <td><em>bool</em></td>
+      <td>no</td>
+      <td>false</td>
+      <td style="text-align: left">Whether the component owns a box shadow or not.</td>
+    </tr>
+    <tr>
+      <td><strong>labelWidth</strong></td>
+      <td><em>number</em></td>
+      <td>no</td>
+      <td>100</td>
+      <td style="text-align: left">The label width.</td>
+    </tr>
+    <tr>
+      <td><strong>customLabel</strong></td>
+      <td><em>node</em></td>
+      <td>no</td>
+      <td>null</td>
+      <td style="text-align: left">User defined function that takes a skill parameter and returns a React component to display instead of the default label.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="skillbars-1">SkillBars</h3>
+
+<p>Group your Skillbars components together</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default value</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>skills</strong></td>
+      <td><em>arrayOf</em></td>
+      <td>yes</td>
+      <td> </td>
+      <td style="text-align: left">An array of SkillBar props data</td>
+    </tr>
+    <tr>
+      <td><strong>duration</strong></td>
+      <td><em>number</em></td>
+      <td>no</td>
+      <td>2</td>
+      <td style="text-align: left">The animation duration in seconds.</td>
+    </tr>
+    <tr>
+      <td><strong>levelProgress</strong></td>
+      <td><em>bool</em></td>
+      <td>no</td>
+      <td>false</td>
+      <td style="text-align: left">Whether or not the level text should increment as the bar grow up or directly display the level value.</td>
+    </tr>
+    <tr>
+      <td><strong>flat</strong></td>
+      <td><em>bool</em></td>
+      <td>no</td>
+      <td>false</td>
+      <td style="text-align: left">Whether the skillbars own a box shadow or not.</td>
+    </tr>
+    <tr>
+      <td><strong>barsHeight</strong></td>
+      <td><em>number</em></td>
+      <td>no</td>
+      <td>30</td>
+      <td style="text-align: left">The SkillBar component height.</td>
+    </tr>
+    <tr>
+      <td><strong>labelsWidth</strong></td>
+      <td><em>number</em></td>
+      <td>no</td>
+      <td>100</td>
+      <td style="text-align: left">The SkillBar component label width.</td>
+    </tr>
+    <tr>
+      <td><strong>spacing</strong></td>
+      <td><em>number</em></td>
+      <td>no</td>
+      <td>15</td>
+      <td style="text-align: left">The spacing between each SkillBar row.</td>
+    </tr>
+    <tr>
+      <td><strong>customLabels</strong></td>
+      <td><em>func</em></td>
+      <td>no</td>
+      <td>null</td>
+      <td style="text-align: left">User defined function that takes a skill parameter and returns a React component to display instead of the default labels.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><sub>This document was generated by the <a href="https://github.com/kevincastejon/react-doc-generator" target="_blank"><strong>React DOC Generator v1.6.0</strong></a>.</sub></p>
+:ET

@@ -4,20 +4,28 @@ A dependency-free, pure-css animated, resizable, customizable, skill bars panel 
 
 ![react-skills preview](https://repository-images.githubusercontent.com/260488185/fa955200-8c9f-11ea-91d8-d8307c6c288c)
 
+- [Live Demo](#livedemo)
+- [Installation](#install)
+- [Usage](#usage)
+- [Developers](#dev)
+- [Props API](#propsapi)
+
 ***This project was bootstrapped with [Create React Library](https://github.com/dimimikadze/create-react-library).***
 
+<a name="livedemo"></a>
 ## Live Demo
-You can see a live demo here
 
-[https://kevincastejon.github.io/react-skills/](https://kevincastejon.github.io/react-skills/)
+- #### [Quick demo](https://kevincastejon.github.io/react-skills/)
+- #### [Storybook playground](https://kevincastejon.github.io/react-skills/storybook)
 
-## Install
-```
+<a name="install"></a>
+## Installation
+```bash
 npm i react-skills
 ```
-
+<a name="usage"></a>
 ## Usage
-```
+```js
 import { SkillBars } from 'react-skills';
 
 const skillsData= [
@@ -33,13 +41,13 @@ const skillsData= [
   }
 ]
 
-...
+// ...
 
 <SkillBars skills={skillsData} />
 ```
 
 or you can use the SkillBar (singular) component this way:
-```
+```js
 import { SkillBar } from 'react-skills';
 
 ...
@@ -48,45 +56,74 @@ import { SkillBar } from 'react-skills';
 <SkillBar name="SomeOtherTech" level={80} color="red" />
 ```
 
-## Props API
-
-### SkillBars
-
-- skills [array of object] *required* - An array of SkillBar props data (see below).
-- duration [number] *optional* default 2 - The animation duration in seconds.
-- levelProgress [bool] *optional* default false - Whether or not the level text should increment as the bar grow up or directly display the level value.
-- flat [bool] *optional* default false - Whether the skillbars own a box shadow or not.
-- barsHeight [number] *optional* default 30 - The SkillBar component height.
-- labelsWidth [number] *optional* default 100 - The SkillBar component label width.
-- spacing [number] *optional* default 15 - The spacing between each SkillBar row.
-- customLabels [function] *optional* default null - User defined function that takes a skill parameter and returns a React component to display instead of the default labels.
-
-### SkillBar
-
-- name [string] *required* - The name of the skill.
-- level [number] *required* - The skill level.
-- color [string] *required* - The SkillBar component color.
-- duration [number] *optional* default 2 - The animation duration in seconds.
-- levelProgress [bool] *optional* default false - Whether or not the level texts should increment as the bars grow up or directly display the level value.
-- flat [bool] *optional* default false - Whether the skillbar owns a box shadow or not.
-- height [number] *optional* default 30 - The SkillBar component height.
-- labelWidth [number] *optional* default 100 - The SkillBar component label width.
-- customLabel [function] *optional* default null - User defined function that takes a skill parameter and returns a React component to display instead of the default label.
-
+<a name="dev"></a>
 ## Developers
+
+### Start
+`npm run start` or `yarn start`
 
 Runs the library in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run test` or `yarn run test`
+### Test
+`npm run test` or `yarn test`
 
 Runs the test watcher in an interactive mode.
 
-### `npm run build` or `yarn build`
+### Build
+`npm run build` or `yarn build`
 
 Builds the library for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `npm run demo` or `yarn demo`
+### Deploy
+`npm run deploy` or `yarn deploy`
+Builds the component then push it on NPM as new version.
+Builds the github page app for production to the `demo` folder.
+Creates a gh-page github branch and push the demo build on that branch.
 
-Builds the demo app for production to the `demo` folder.
-It correctly bundles React demo app in production mode and optimizes the build for the best performance.
+<a name="propsapi"></a>
+## Props API
+
+
+### SkillBar
+
+Displays a animated skill bar   
+
+
+
+
+| Property | Type | Required | Default value | Description |
+|-----|-----|-----|-----|:-----|
+|**name**|*string*|yes||The name of the skill.|
+|**level**|*number*|yes||The skill level.|
+|**color**|*string*|yes||The background color.|
+|**duration**|*number*|no|2|The animation duration in seconds.|
+|**height**|*number*|no|30|The component height.|
+|**levelProgress**|*bool*|no|false|Whether or not the level text should increment as the bar grows up or directly display the level value.|
+|**flat**|*bool*|no|false|Whether the component owns a box shadow or not.|
+|**labelWidth**|*number*|no|100|The label width.|
+|**customLabel**|*func*|no|null|User defined function that takes a skill parameter and returns a React component to display instead of the default label.|
+
+-----
+
+### SkillBars
+
+Group your Skillbars components together   
+
+
+
+
+| Property | Type | Required | Default value | Description |
+|-----|-----|-----|-----|:-----|
+|**skills**|*arrayOf*|yes||An array of SkillBar props data|
+|**duration**|*number*|no|2|The animation duration in seconds.|
+|**levelProgress**|*bool*|no|false|Whether or not the level text should increment as the bar grow up or directly display the level value.|
+|**flat**|*bool*|no|false|Whether the skillbars own a box shadow or not.|
+|**barsHeight**|*number*|no|30|The SkillBar component height.|
+|**labelsWidth**|*number*|no|100|The SkillBar component label width.|
+|**spacing**|*number*|no|15|The spacing between each SkillBar row.|
+|**customLabels**|*func*|no|null|User defined function that takes a skill parameter and returns a React component to display instead of the default labels.|
+
+-----
+
+<sub>This document was generated by the <a href="https://github.com/kevincastejon/react-doc-generator" target="_blank">**React DOC Generator v1.8.0**</a>.</sub>
