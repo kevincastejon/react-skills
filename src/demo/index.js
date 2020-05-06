@@ -20,7 +20,7 @@ const StoryBookRedirect = () => {
 }
 
 ReactDOM.render(
-  <Router>
+  <Router basename="/react-skills">
     <Switch>
       <Route path="/demo">
         <App />
