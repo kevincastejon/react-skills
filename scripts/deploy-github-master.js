@@ -20,9 +20,9 @@ async function exec(cmd){
     console.log('Committing repo...');
     await exec('git add . && git commit -m '+message);
     console.log('Committed repo');
-    console.log('Pushing component on github master branch...');
+    console.log('Pushing on github master branch...');
     await exec('git push');
-    console.log('Pushed component on github master branch');
+    console.log('Pushed on github master branch');
   } catch (e) {
     console.log(e);
   }
