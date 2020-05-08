@@ -26,9 +26,9 @@ async function exec(cmd){
     console.log('Publishing on npm...');
     await exec('npm publish');
     console.log('Published on npm');
-    console.log('Pushing component on github master branch...');
+    console.log('Pushing on github master branch...');
     await exec('git push');
-    console.log('Pushed component on github master branch');
+    console.log('Pushed on github master branch');
     console.log('Pushing github page on gh-pages branch...');
     await exec('gh-pages -d demo');
     console.log('Pushed component on github master branch');
