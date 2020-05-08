@@ -30,3 +30,4 @@ Gemfile.lock
 *.gem
 .jekyll-cache
 architect/public/**
+architect/index.md
