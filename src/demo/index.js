@@ -1,38 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import {  Switch, Route, BrowserRouter as Router} from "react-router-dom";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const DocuRedirect = () => {
-  useEffect(() => {
-    window.location.href = "/react-skills/documentation"
-  })
-  return(<>redirecting...</>)
-}
-
-const StoryBookRedirect = () => {
-  useEffect(() => {
-    window.location.href = "/react-skills/storybook"
-  })
-  return(<>redirecting...</>)
-}
-
 ReactDOM.render(
-  <Router basename="/react-skills">
-    <Switch>
-      <Route exact path="/documentation">
-        <DocuRedirect />
-      </Route>
-      <Route exact path="/storybook">
-        <StoryBookRedirect />
-      </Route>
-      <Route exact path="/">
         <App />
-      </Route>
-    </Switch>
-  </Router>
   , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

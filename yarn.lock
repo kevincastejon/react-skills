@@ -1390,10 +1390,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@kevincastejon/react-doc-generator@^1.2.5":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@kevincastejon/react-doc-generator/-/react-doc-generator-1.8.0.tgz#13cad0ad8901a93d94ce88c30609f82d72694cbe"
-  integrity sha512-K1Wgi4Fll+RAbjYQuTjwpobXy+kuVq5ZlHPqce0iTwp3g6feWnyrGmMxpdK90hp3GhnrtsWLtnvi3kJLMNE3Aw==
+"@kevincastejon/react-doc-generator@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@kevincastejon/react-doc-generator/-/react-doc-generator-1.10.0.tgz#f9cccef37e7077b9c22a4b3ed039e0ea56991520"
+  integrity sha512-0oxwqy2rCgpGMClhYjCQ4pI7nLN9PYrrbodwRpRwE/gQtZwqpaSvPgCj4H04tTmbxsVzQXqbISDoBV7jtjkIKg==
   dependencies:
     cli-table "^0.3.1"
     colors "^1.1.2"
