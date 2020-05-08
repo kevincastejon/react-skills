@@ -1,5 +1,5 @@
 const child_process = require('child_process');
-const message = process.argv[2];
+const message = '"'+process.argv[2]+'"';
 if (!message) {
   throw new Error('"message" argument is mandatory!')
 }
