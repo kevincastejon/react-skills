@@ -53,44 +53,32 @@ Creates a gh-page github branch and push the demo build on that branch.
 <a name="usage"></a>
 ## Usage
 
-&#x60;&#x60;&#x60;js
-import { SkillBars } from &#x27;react-skills&#x27;;
+```js
+import { SkillBars } from 'react-skills';
 
-const skillsData&#x3D; [
-  {
-    name: &#x27;ReactJS&#x27;,
-    level: 100,
-    color: &#x27;blue&#x27;,
-  },
-  {
-    name: &#x27;SomeOtherTech&#x27;,
-    level: 85,
-    color: &#x27;red&#x27;,
-  }
-]
+const skillsData= [{ name: 'ReactJS', level: 100, color: 'blue', }, { name: 'SomeOtherTech', level: 85, color: 'red', }]
 
 // ...
 
-&lt;SkillBars skills&#x3D;{skillsData} /&gt;
-&#x60;&#x60;&#x60;
+<SkillBars skills={skillsData} /> 
+```
 
 or you can use the SkillBar (singular) component this way:
-&#x60;&#x60;&#x60;js
-import { SkillBar } from &#x27;react-skills&#x27;;
+```js
+import { SkillBars } from 'react-skills';
 
 // ...
 
-&lt;SkillBar name&#x3D;&quot;ReactJS&quot; level&#x3D;{100} color&#x3D;&quot;blue&quot; /&gt;
-&lt;SkillBar name&#x3D;&quot;SomeOtherTech&quot; level&#x3D;{80} color&#x3D;&quot;red&quot; /&gt;
-&#x60;&#x60;&#x60;
+<SkillBar name="ReactJS" level={100} color="blue" /> <SkillBar name="SomeOtherTech" level={80} color="red" />
+```
 
 
 <a name="dev"></a>
 ## Developers
 
-&#x60;&#x60;&#x60;bash
+```bash
 npm i react-skills
-&#x60;&#x60;&#x60;
+```
 
 
 <a name="propsapi"></a>
