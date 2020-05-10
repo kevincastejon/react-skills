@@ -7,6 +7,7 @@
     "start": "node scripts/start.js",
     "dev": "node scripts/start.js",
     "test": "node scripts/test.js",
+    "generate-readme": "node scripts/generate-readme.js",
     "storybook": "start-storybook -p 6006",
     "build-component": "node scripts/build.js",
     "build-documentation-page": "node scripts/build-documentation-page.js",
@@ -19,10 +20,11 @@
     "full-build-and-deploy": "npm run build-all && node scripts/full-deploy.js"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "create-react-readme": "^1.0.1"
+  },
   "devDependencies": {
     "@babel/core": "7.6.0",
-    "@kevincastejon/react-doc-generator": "^1.10.0",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-docs": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
