@@ -20,7 +20,7 @@
 <meta property="og:description" content="A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component." />
 <meta property="og:site_name" content="react-skills" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"/","headline":"react-skills","name":"react-skills","description":"A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.","@context":"https://schema.org"}</script>
+{"@type":"WebSite","headline":"react-skills","url":"/","name":"react-skills","description":"A dependency-free, pure-css animated, resizable, customizable, skill bars panel React component.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -45,6 +45,8 @@
 
 <p><img src="https://repository-images.githubusercontent.com/260488185/fa955200-8c9f-11ea-91d8-d8307c6c288c" alt="react-skills preview" /></p>
 
+<hr />
+
 <ul>
   <li><strong><a href="#links">Links</a></strong></li>
   <li><strong><a href="#install">Installation</a></strong></li>
@@ -53,7 +55,7 @@
   <li><strong><a href="#propsapi">Props API</a></strong></li>
 </ul>
 
-<p><strong><em>This project was bootstrapped with <a href="https://github.com/dimimikadze/create-react-library">Create React Library</a>.</em></strong></p>
+<hr />
 
 <p><a name="links"></a></p>
 <h2 id="links">Links</h2>
@@ -69,73 +71,70 @@
 <p><a name="install"></a></p>
 <h2 id="installation">Installation</h2>
 
-<h3 id="start">Start</h3>
-<p>`npm run start` or `yarn start`</p>
-
-<p>Runs the library in development mode. Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
-
-<h3 id="test">Test</h3>
-<p>`npm run test` or `yarn test`</p>
-
-<p>Runs the test watcher in an interactive mode.</p>
-
-<h3 id="build">Build</h3>
-<p>`npm run build` or `yarn build`</p>
-
-<p>Builds the library for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.</p>
-
-<h3 id="deploy">Deploy</h3>
-<p>`npm run deploy` or `yarn deploy`
-Builds the component then push it on NPM as new version.
-Builds the github page app for production to the `demo` folder.
-Creates a gh-page github branch and push the demo build on that branch.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i react-skills
+</code></pre></div></div>
 
 <p><a name="usage"></a></p>
 <h2 id="usage">Usage</h2>
 
-<p>```js</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">SkillBars</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-skills</span><span class="dl">'</span><span class="p">;</span>
 
-<p>import { SkillBars } from 'react-skills';</p>
+<span class="kd">const</span> <span class="nx">skillsData</span><span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">ReactJS</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">level</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">blue</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">SomeOtherTech</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">level</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span>
+    <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">red</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">]</span>
 
-<p>const skillsData= [
-  {
-    name: 'ReactJS',
-    level: 100,
-    color: 'blue',
-  },
-  {
-    name: 'SomeOtherTech',
-    level: 85,
-    color: 'red',
-  }
-]</p>
+<span class="c1">// ...</span>
 
-<p>// …</p>
-
-<p>&lt;SkillBars skills={skillsData} /&gt;</p>
-
-<p>```</p>
+<span class="o">&lt;</span><span class="nx">SkillBars</span> <span class="nx">skills</span><span class="o">=</span><span class="p">{</span><span class="nx">skillsData</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>
+</code></pre></div></div>
 
 <p>or you can use the SkillBar (singular) component this way:</p>
 
-<p>```js</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">SkillBar</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-skills</span><span class="dl">'</span><span class="p">;</span>
 
-<p>import { SkillBar } from 'react-skills';</p>
+<span class="c1">// ...</span>
 
-<p>// …</p>
+<span class="o">&lt;</span><span class="nx">SkillBar</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">ReactJS</span><span class="dl">"</span> <span class="nx">level</span><span class="o">=</span><span class="p">{</span><span class="mi">100</span><span class="p">}</span> <span class="nx">color</span><span class="o">=</span><span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="nx">SkillBar</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">SomeOtherTech</span><span class="dl">"</span> <span class="nx">level</span><span class="o">=</span><span class="p">{</span><span class="mi">80</span><span class="p">}</span> <span class="nx">color</span><span class="o">=</span><span class="dl">"</span><span class="s2">red</span><span class="dl">"</span> <span class="o">/&gt;</span>
 
-<p>&lt;SkillBar name="ReactJS" level={100} color="blue" /&gt;
-&lt;SkillBar name="SomeOtherTech" level={80} color="red" /&gt;</p>
-
-<p>```</p>
+</code></pre></div></div>
 
 <p><a name="dev"></a></p>
 <h2 id="developers">Developers</h2>
 
-<p>```bash
-npm i react-skills
-```</p>
+<h3 id="start">Start</h3>
+<p><code class="highlighter-rouge">npm run start</code> or <code class="highlighter-rouge">yarn start</code></p>
+
+<p>Runs the library in development mode. Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser.</p>
+
+<h3 id="test">Test</h3>
+<p><code class="highlighter-rouge">npm run test</code> or <code class="highlighter-rouge">yarn test</code></p>
+
+<p>Runs the test watcher in an interactive mode.</p>
+
+<h3 id="build">Build</h3>
+<p><code class="highlighter-rouge">npm run build</code> or <code class="highlighter-rouge">yarn build</code></p>
+
+<p>Builds the library for production to the <code class="highlighter-rouge">build</code> folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.</p>
+
+<h3 id="deploy">Deploy</h3>
+<p><code class="highlighter-rouge">npm run deploy</code> or <code class="highlighter-rouge">yarn deploy</code>
+Builds the component then push it on NPM as new version.
+Builds the github page app for production to the <code class="highlighter-rouge">demo</code> folder.
+Creates a gh-page github branch and push the demo build on that branch.</p>
 
 <p><a name="propsapi"></a></p>
 <h2 id="props-api">Props API</h2>
@@ -299,7 +298,7 @@ npm i react-skills
 
 <hr />
 
-<p><sub>This document was generated by the <a href="https://github.com/kevincastejon/react-doc-generator" target="_blank"><strong>React DOC Generator v1.10.0</strong></a>.</sub></p>
+<p><sub>This document was generated by the <a href="https://github.com/kevincastejon/create-react-readme" target="_blank"><strong>Create React Readme v1.0.2</strong></a>.</sub></p>
 
         </section>
 
